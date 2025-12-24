@@ -1,0 +1,36 @@
+{
+  "model_type": "cnn_openmax",
+  "approach": "supervised_cnn_classifier_with_openmax",
+  "num_known": 6,
+  "known_classes": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    6
+  ],
+  "unknown_classes": [
+    4
+  ],
+  "known_class_names": [
+    "Normal",
+    "Botnet",
+    "Brute Force",
+    "DoS",
+    "PortScan",
+    "Web Attack"
+  ],
+  "epochs_trained": 26,
+  "batch_size": 512,
+  "lr": 0.001,
+  "tail_size": 200,
+  "alpha_rank": 5,
+  "distance_type": "cosine",
+  "train_time_min": 11.28658558924993,
+  "best_val_accuracy": 0.9378358721733093,
+  "classifier_test_accuracy": 0.9378028660318658,
+  "overall_accuracy": 0.9382229281950245,
+  "macro_auc": 0.8470649553128368,
+  "h_score": 0.0
+}
