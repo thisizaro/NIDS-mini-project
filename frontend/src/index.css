@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-severity-low: #16a34a;
+  --color-severity-medium: #ca8a04;
+  --color-severity-high: #ea580c;
+  --color-severity-critical: #dc2626;
+
+  --color-status-healthy: #16a34a;
+  --color-status-unhealthy: #dc2626;
+  --color-status-unknown: #9ca3af;
+}
+
+body {
+  margin: 0;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  min-height: 100vh;
+}
