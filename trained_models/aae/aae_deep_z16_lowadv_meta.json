@@ -1,0 +1,29 @@
+{
+  "config": {
+    "enc_units": [
+      128,
+      64,
+      32
+    ],
+    "latent_dim": 16,
+    "dec_units": [
+      32,
+      64,
+      128
+    ],
+    "disc_units": [
+      32,
+      16
+    ],
+    "dropout": 0.1,
+    "adv_weight": 0.5,
+    "batch_size": 256,
+    "lr": 0.001,
+    "epochs": 80,
+    "patience": 10
+  },
+  "input_dim": 78,
+  "model_type": "aae",
+  "disc_loss_final": "0.6975614",
+  "gen_loss_final": "0.69143206"
+}

@@ -1,0 +1,21 @@
+{
+  "config": {
+    "enc_units": [
+      128,
+      64
+    ],
+    "dec_units": [
+      64,
+      128
+    ],
+    "dropout": 0.2,
+    "bidirectional": true,
+    "batch_size": 512,
+    "lr": 0.0005,
+    "epochs": 80,
+    "patience": 8
+  },
+  "input_dim": 78,
+  "model_type": "lstm_ae",
+  "input_shape": "(N, 78, 1)"
+}
