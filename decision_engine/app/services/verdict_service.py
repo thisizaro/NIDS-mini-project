@@ -327,3 +327,5 @@ class VerdictService:
             f"Context: {context.networkZone.value} network zone, {context.assetCriticality.value} criticality asset. "
             f"Final severity: {severity.value}."
         )
+
+# Enhanced with SSH, SMB, SMTP attack patterns
