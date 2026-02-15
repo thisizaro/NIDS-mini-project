@@ -32,3 +32,5 @@ COMMAND_TIMEOUT_SECONDS = None  # None = wait forever
 # Dummy processing mode enabled (no Gradle execution)
 DUMMY_PROCESSING_MODE = False
 
+
+# Added CICFLOW_LOCAL environment variable support
