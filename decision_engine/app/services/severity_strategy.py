@@ -71,3 +71,5 @@ class ConfidenceBasedStrategy(SeverityStrategy):
             SeverityLevel.CRITICAL: SeverityLevel.CRITICAL,
         }
         return upgrade_map[severity]
+
+# Tuned thresholds for model FP tolerance
