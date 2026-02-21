@@ -45,3 +45,4 @@ def clean_csv_files(dir_path: str):
     for filename in os.listdir(dir_path):
         if filename.endswith(".csv"):
             os.remove(os.path.join(dir_path, filename))
+# Improved cleanup for multi-CSV runs
