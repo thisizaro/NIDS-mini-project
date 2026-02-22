@@ -150,3 +150,5 @@ class PreprocessorService:
             "feature_names": self.feature_columns,
             "labels": labels,
         }
+
+# Added CICFlowMeter abbreviated column rename map
