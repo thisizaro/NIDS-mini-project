@@ -110,3 +110,5 @@ async def run_full_pipeline(pcap_bytes: bytes, pcap_filename: str, context: dict
         "verdict": verdict_result,
         "predictions": model_result.get("predictions"),
     }
+
+# Added per-step error handling and tracking
