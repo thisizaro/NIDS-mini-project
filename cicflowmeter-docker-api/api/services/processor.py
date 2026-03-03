@@ -115,3 +115,5 @@ def run_processing_command():
             _processing_lock.release()
 
 # Added realistic column generation for testing
+
+# Handle zero-flow PCAP edge case
