@@ -161,3 +161,5 @@ async def aggregated_health():
         "status": "healthy" if all_healthy else "degraded",
         "services": services,
     }
+
+# Added per-service timeout and detail to health check
