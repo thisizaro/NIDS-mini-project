@@ -152,3 +152,5 @@ class PreprocessorService:
         }
 
 # Added CICFlowMeter abbreviated column rename map
+
+# Handle zero-row CSVs and missing columns
