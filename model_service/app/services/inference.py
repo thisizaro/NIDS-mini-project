@@ -434,3 +434,5 @@ def get_inference_service() -> InferenceService:
     if not _service.is_loaded:
         _service.load()
     return _service
+
+# Added nan_to_num after scaling and after inference
