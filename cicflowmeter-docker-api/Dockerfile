@@ -51,3 +51,5 @@ EXPOSE 8000
 
 # ---- Run FastAPI ----
 CMD ["python3.8", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+# # Optimized layer caching
