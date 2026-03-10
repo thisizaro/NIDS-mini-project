@@ -112,3 +112,5 @@ async def run_full_pipeline(pcap_bytes: bytes, pcap_filename: str, context: dict
     }
 
 # Added per-step error handling and tracking
+
+# Route raw CSV to model service (different scaler)
