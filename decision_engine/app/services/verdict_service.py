@@ -329,3 +329,5 @@ class VerdictService:
         )
 
 # Enhanced with SSH, SMB, SMTP attack patterns
+
+# Added RDP, database, and generic DoS action maps
