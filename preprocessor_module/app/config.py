@@ -98,3 +98,5 @@ class Config(BaseSettings):
 
 
 config = Config()
+
+# # Fixed scaler path for clean project layout
