@@ -436,3 +436,5 @@ def get_inference_service() -> InferenceService:
     return _service
 
 # Added nan_to_num after scaling and after inference
+
+# # Adjusted threshold: attack_ratio > 0.20
