@@ -64,3 +64,5 @@ class VerdictResponse(BaseModel):
     inferredAttack: Optional[str] = None
     recommendedActions: List[str]
     alertsTriggered: List[AlertType]
+
+# # Added traffic_profile and inferredAttack
