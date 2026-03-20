@@ -65,3 +65,5 @@ async def health_check():
         service="preprocessor-service",
         scaler_loaded=scaler_loaded,
     )
+
+# # Added detailed health check response
