@@ -62,3 +62,5 @@ def process_pcap(file: UploadFile = File(...)):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+# # Finalized error handling
