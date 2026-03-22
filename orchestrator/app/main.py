@@ -16,3 +16,5 @@ app.add_middleware(
 )
 
 app.include_router(router)
+
+# # Production CORS settings
