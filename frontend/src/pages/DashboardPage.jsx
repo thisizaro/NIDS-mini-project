@@ -9,10 +9,10 @@ export default function DashboardPage() {
     <div className="space-y-5 max-w-6xl">
       <ServiceHealthPanel />
       <StatsPanel />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      {/*<div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <SeverityBreakdown />
         <AlertSummary />
-      </div>
+      </div>*/}
       <RecentAnalysesTable />
     </div>
   );

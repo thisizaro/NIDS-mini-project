@@ -7,11 +7,13 @@ import { useAnalysisPipeline } from "../hooks/useAnalysisPipeline";
 
 export default function AnalyzePage() {
   const [file, setFile] = useState(null);
-  const [context, setContext] = useState({ networkZone: "", assetCriticality: "" });
+  const [context, setContext] = useState({
+    networkZone: "Internal",
+    assetCriticality: "Low",
+  });
   const pipeline = useAnalysisPipeline();
 
-  const canRun =
-    file && context.networkZone && context.assetCriticality && pipeline.status !== "running";
+  const canRun = file && pipeline.status !== "running";
 
   function handleRun() {
     if (!canRun) return;
@@ -41,15 +43,15 @@ export default function AnalyzePage() {
             disabled={pipeline.status === "running"}
           />
         </div>
-        <div>
-          <h3 className="text-xs font-semibold text-slate-400 mb-2 uppercase tracking-wider">
+        <div className="flex items-center">
+          {/*<h3 className="text-xs font-semibold text-slate-400 mb-2 uppercase tracking-wider">
             Context
-          </h3>
-          <ContextConfigurator
+          </h3>*/}
+          {/*<ContextConfigurator
             context={context}
             onChange={setContext}
             disabled={pipeline.status === "running"}
-          />
+          />*/}
           <div className="flex gap-2 mt-3">
             <button
               className={`px-4 py-2 rounded text-sm font-medium transition-colors ${
@@ -62,7 +64,8 @@ export default function AnalyzePage() {
             >
               {pipeline.status === "running" ? "Running..." : "Run Analysis"}
             </button>
-            {(pipeline.status === "complete" || pipeline.status === "error") && (
+            {(pipeline.status === "complete" ||
+              pipeline.status === "error") && (
               <button
                 className="px-4 py-2 rounded text-sm font-medium bg-slate-800 hover:bg-slate-700 text-slate-300"
                 onClick={handleReset}

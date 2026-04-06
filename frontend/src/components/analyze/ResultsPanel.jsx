@@ -13,10 +13,10 @@ export default function ResultsPanel({ result }) {
     <div className="space-y-4">
       <VerdictBanner verdict={verdictResult} />
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <RecommendedActions actions={verdictResult.recommendedActions} />
+      <div className="grid grid-cols-1 lg:grid-cols-1 gap-4">
+        {/*<RecommendedActions actions={verdictResult.recommendedActions} />*/}
         <div className="space-y-4">
-          <AlertsTriggered alerts={verdictResult.alertsTriggered} />
+          {/*<AlertsTriggered alerts={verdictResult.alertsTriggered} />*/}
           <ExplanationCard
             explanation={verdictResult.explanation}
             modelFindings={modelFindings}

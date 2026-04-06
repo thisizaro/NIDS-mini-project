@@ -6,8 +6,8 @@ const NAV_ITEMS = [
   { to: "/", label: "Dashboard", icon: "\u25A6" },
   { to: "/analyze", label: "Analyze", icon: "\u25B6" },
   { to: "/history", label: "History", icon: "\u25F0" },
-  { to: "/alerts", label: "Alerts", icon: "\u26A0" },
-  { to: "/test", label: "Service Testing", icon: "\u2692" },
+  //{ to: "/alerts", label: "Alerts", icon: "\u26A0" },
+  //{ to: "/test", label: "Service Testing", icon: "\u2692" },
 ];
 
 export default function Sidebar() {
@@ -16,8 +16,10 @@ export default function Sidebar() {
   return (
     <aside className="w-56 shrink-0 bg-slate-900 border-r border-slate-800 flex flex-col h-screen sticky top-0">
       <div className="px-4 py-4 border-b border-slate-800">
-        <h1 className="text-base font-bold text-slate-100 tracking-wide">NIDS</h1>
-        <p className="text-xs text-slate-500">Intrusion Detection System</p>
+        <h1 className="text-base font-bold text-slate-100 tracking-wide">
+          DL Based NIDS
+        </h1>
+        {/*<p className="text-xs text-slate-500">Intrusion Detection System</p>*/}
       </div>
 
       <nav className="flex-1 py-3">
@@ -41,10 +43,15 @@ export default function Sidebar() {
       </nav>
 
       <div className="px-4 py-3 border-t border-slate-800">
-        <p className="text-xs text-slate-500 mb-2 uppercase tracking-wider">Services</p>
+        <p className="text-xs text-slate-500 mb-2 uppercase tracking-wider">
+          Services
+        </p>
         <div className="space-y-1.5">
           {Object.entries(services).map(([name, svc]) => (
-            <div key={name} className="flex items-center gap-2 text-xs text-slate-400">
+            <div
+              key={name}
+              className="flex items-center gap-2 text-xs text-slate-400"
+            >
               <StatusDot status={svc.status} />
               <span className="truncate">{svc.label}</span>
             </div>

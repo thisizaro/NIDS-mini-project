@@ -41,20 +41,20 @@ export default function HistoryPage() {
       label: "Attack Type",
       render: (_, row) => row.modelFindings?.attack_type || "--",
     },
-    {
-      key: "zone",
-      label: "Zone",
-      render: (_, row) => (
-        <span className="text-xs">{row.context?.networkZone || "--"}</span>
-      ),
-    },
-    {
-      key: "criticality",
-      label: "Asset",
-      render: (_, row) => (
-        <span className="text-xs">{row.context?.assetCriticality || "--"}</span>
-      ),
-    },
+    //{
+    //  key: "zone",
+    //  label: "Zone",
+    //  render: (_, row) => (
+    //    <span className="text-xs">{row.context?.networkZone || "--"}</span>
+    //  ),
+    //},
+    //{
+    //  key: "criticality",
+    //  label: "Asset",
+    //  render: (_, row) => (
+    //    <span className="text-xs">{row.context?.assetCriticality || "--"}</span>
+    //  ),
+    //},
     {
       key: "flows",
       label: "Flows",
@@ -80,7 +80,7 @@ export default function HistoryPage() {
     <div className="space-y-4 max-w-6xl">
       {/* Filters */}
       <div className="flex items-center gap-3 flex-wrap">
-        <select
+        {/*<select
           className="bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-xs text-slate-200"
           value={severityFilter}
           onChange={(e) => setSeverityFilter(e.target.value)}
@@ -99,7 +99,7 @@ export default function HistoryPage() {
           {NETWORK_ZONES.map((z) => (
             <option key={z.value} value={z.value}>{z.label}</option>
           ))}
-        </select>
+        </select>*/}
         <span className="text-xs text-slate-500">{filtered.length} results</span>
         <div className="ml-auto">
           {showClearConfirm ? (
@@ -158,10 +158,10 @@ export default function HistoryPage() {
             </button>
           </div>
           <VerdictBanner verdict={expanded.verdict} />
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
-            <RecommendedActions actions={expanded.verdict?.recommendedActions} />
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-3">
+            {/*<RecommendedActions actions={expanded.verdict?.recommendedActions} />*/}
             <div className="space-y-3">
-              <AlertsTriggered alerts={expanded.verdict?.alertsTriggered} />
+              {/*<AlertsTriggered alerts={expanded.verdict?.alertsTriggered} />*/}
               <ExplanationCard
                 explanation={expanded.verdict?.explanation}
                 modelFindings={expanded.modelFindings}
