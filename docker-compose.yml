@@ -1,0 +1,49 @@
+version: "3.9"
+
+services:
+
+  cicflowmeter:
+    build: ./cicflowmeter-docker-api
+    ports:
+      - "8010:8000"
+
+  preprocessor:
+    build: ./preprocessor_module
+    ports:
+      - "8001:8001"
+
+  decision:
+    build: ./decision_engine
+    ports:
+      - "8002:8002"
+
+  model:
+    build: ./model_service
+    ports:
+      - "8003:8003"
+    volumes:
+      - ./trained_models:/app/trained_models
+    environment:
+      - MODEL_BASE_PATH=/app/trained_models
+
+  orchestrator:
+    build: ./orchestrator
+    ports:
+      - "8080:8080"
+    depends_on:
+      - preprocessor
+      - model
+      - decision
+      - cicflowmeter
+    environment:
+      - PREPROCESSOR_URL=http://preprocessor:8001
+      - MODEL_SERVICE_URL=http://model:8003
+      - DECISION_ENGINE_URL=http://decision:8002
+      - CICFLOWMETER_URL=http://cicflowmeter:8000
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - orchestrator
